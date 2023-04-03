@@ -99,5 +99,25 @@ Here's a steps-by-step that followed to achieve the task :-
 1. Clone the repo `gh repo clone baraaAlosaily/Tamatem-Frontend-Task`
 2. Move to client directory by using the following command `cd client`
 3. Run the following command `ng serve`
+4. Open the following URL `http://localhost:4200/`
 
 Note: make sure that you install angular 15 or latest version of angular 
+
+
+## Screenshots 
+
+#### Full Screen
+
+![img](./client/src/assets/ss1.png)
+
+#### Mobile View 
+
+![img2](./client/src/assets/ss2.png)
+
+#### Validation Messages
+
+![img3](./client/src/assets/ss3.png)
+
+#### Validation Messages 
+
+![img4](./client/src/assets/ss4.png)
