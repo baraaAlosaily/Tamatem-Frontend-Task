@@ -1,0 +1,30 @@
+<form class="login__wrapper__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <!-- Email field -->
+    <section>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label >
+            <input formControlName="email" matInput placeholder="Email">
+        </mat-form-field>
+    </section>
+    <!-- Validation messages -->
+    <div class="login__wrapper__form--validationMessage" *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+        <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</div>
+        <div *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email format</div>
+    </div>
+    <!-- Password field -->
+    <section>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label >
+            <input formControlName="password" matInput placeholder="Password">
+        </mat-form-field>
+    </section>
+    <!-- Validation messages -->
+    <div class="login__wrapper__form--validationMessage" *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+        <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</div>
+        <div *ngIf="loginForm.get('password')?.errors?.['invalidPassword']">Password should contain lowercase and uppercase letters</div>
+    </div>
+    <!-- Submit button -->
+    <div class="login__wrapper__form--submitButton">
+        <button mat-raised-button type="submit" [disabled]="loginForm.invalid">{{'login'|uppercase}}</button>
+    </div>
+</form>
