@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .login__wrapper__form{
     margin: 1rem 0 0 0;
     display: flex;
@@ -8,8 +10,8 @@
         button{
             width: 6.125rem;
             height: 2.25rem;
-            background-color: #B00020;
-            color: #FFFFFF;
+            background-color: $primary-red;
+            color: $primary-white
         }
         margin-top: 1rem;
         width: 100%;
@@ -18,7 +20,7 @@
         align-items: end;
     }
     &--validationMessage{
-        color: #B00020;
+        color: $primary-red;
         margin-top: 0.5rem;
         margin-left: 1rem;
         margin-bottom: 0.5rem;
@@ -37,11 +39,11 @@
 }
 
 ::ng-deep .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__notch, .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
-    border-color: #B00020
+    border-color: $primary-red
 }
 
 ::ng-deep .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: #B00020
+    color: $primary-red
 }
 
 // Media queries
